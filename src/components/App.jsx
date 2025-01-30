@@ -7,18 +7,18 @@ function App() {
   const [ lightMode, setLightMode ] = useState( false )
   const [ audioOn, setAudioOn ] = useState( true )
 
-  const [ raccoonsArr, setRaccoonsArr ] = useState( '' )
+  const [ raccoonsArr, setRaccoonsArr ] = useState( [] )
 
-  function handleLightModeClick(event) {
-    setLightMode( lightMode )
+  function handleLightModeClick() {
+    setLightMode( lightMode => !lightMode )
   }
 
   useEffect( () => {
 
-    fetch("http://localhost:5555/racons")
-    .then( res => {
-      if (res.ok) {
-        return res.json()
+    fetch("http://localhost:5555/raccoons")
+    .then( Response => {
+      if (Response.ok) {
+        return Response.json()
       } else {
         throw new Error('Unable to fetch data!')
       }
@@ -53,9 +53,11 @@ function App() {
 
       <main>
 
-        <RaccoonsContainer raccoonsArr={raccoonsArr} audioOn={audioOn} />
+        <RaccoonsContainer raccoonsArr={raccoonsArr} audioOn={audioOn} /> 
+        {/*racconsArr and audioOn are props*/}
 
-        <RaccoonForm raccoonsArr={raccoonsArr} />
+        <RaccoonForm raccoonsArr={raccoonsArr}
+        setRaccoonsArr={setRaccoonsArr} />
 
       </main>
 

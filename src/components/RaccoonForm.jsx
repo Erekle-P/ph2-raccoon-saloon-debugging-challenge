@@ -6,16 +6,17 @@ function RaccoonForm({ setRaccoonsArr, raccoonsArr }) {
     const [location, setLocation] = useState("")
     const [img_url, setImgUrl] = useState("")
 
+
     function handleChangeName(event) {
-        setName(event.target)
+        setName(event.target.value)
     }
     
     function handleChangeLocation(event) {
-        setLocation(event.target)
+        setLocation(event.target.value)
     }
 
     function handleChangeImageUrl(event) {
-        setImgUrl(event.target)
+        setImgUrl(event.target.value)
     }
 
     function handleSubmit(event) {
@@ -23,16 +24,19 @@ function RaccoonForm({ setRaccoonsArr, raccoonsArr }) {
 
         const bodyObj = {name, location, img_url}
 
-        fetch("http://localhost:5555", {
+        fetch("http://localhost:5555/raccoons", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: bodyObj
+            body: JSON.stringify ({name, location, img_url})
         })
         .then( res => {
             if (res.ok) {
+                setName("")
+                setLocation("")
+                setImgUrl("")
                 return res.json()
             } else {
                 throw new Error("Something went wrong!")
@@ -49,21 +53,21 @@ function RaccoonForm({ setRaccoonsArr, raccoonsArr }) {
             <input type="text" 
             name="name" 
             onChange={handleChangeName} 
-            value={'name'}
+            value={name}
             placeholder="raccoon name" />
 
             <label htmlFor="location">Location:</label>
             <input type="text" 
             name="location" 
             onChange={handleChangeLocation} 
-            value={'location'}
+            value={location}
             placeholder="raccoon location" />
 
             <label htmlFor="img_url">Image:</label>
             <input type="text" 
             name="img_url" 
             onChange={handleChangeImageUrl} 
-            value={'img_url'}
+            value={img_url}
             placeholder="image url" />
 
             <br/>

@@ -1,18 +1,18 @@
 {
   "raccoons": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Bob",
       "location": "the woods"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Jimbo",
       "location": "the trashcan in front of your apartment",
       "img_url": "https://vetmed.tamu.edu/news/wp-content/uploads/sites/9/2011/05/raccoon-3820327_1920.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Harold",
       "location": "in between the walls",
       "img_url": "https://images.squarespace-cdn.com/content/v1/591d131d17bffc24f111e867/1634085388425-D7ALOEO8LHIHBFJLCW5F/Mischeif_bio0.jpg"
@@ -21,25 +21,49 @@
       "name": "George",
       "location": "11 Broadway",
       "img_url": "https://i.natgeofe.com/n/8271db90-5c35-46bc-9429-588a9529e44a/raccoon_thumb_3x4.JPG",
-      "id": 4
+      "id": "4"
     },
     {
       "name": "Tom",
       "location": "Central Park",
       "img_url": "https://www.rd.com/wp-content/uploads/2021/04/GettyImages-514622028-e1617288074638.jpg",
-      "id": 5
+      "id": "5"
     },
     {
       "name": "Rocky \"Rage\"",
       "location": "multiple food dumpsters",
       "img_url": "https://www.lansingstatejournal.com/gcdn/-mm-/ac908e0d54b16ba77691cc686f7ac13774ea9b49/c=832-0-4970-2338/local/-/media/2018/06/20/MIGroup/Lansing/636651005499960011-stock-raccoon.jpg",
-      "id": 6
+      "id": "6"
     },
     {
       "name": "Rocket",
       "location": "space",
       "img_url": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/12/James-Gunn-Adam-Sandler-Rocket-Raccoon.jpg",
-      "id": 7
+      "id": "7"
+    },
+    {
+      "id": "c9af",
+      "name": "name",
+      "location": "location",
+      "img_url": "image"
+    },
+    {
+      "id": "81ba",
+      "name": "",
+      "location": "",
+      "img_url": "https://t3.ftcdn.net/jpg/01/73/37/16/360_F_173371622_02A2qGqjhsJ5SWVhUPu0t9O9ezlfvF8l.jpg"
+    },
+    {
+      "id": "2077",
+      "name": "Happy",
+      "location": "Tbilisi",
+      "img_url": "https://t3.ftcdn.net/jpg/01/73/37/16/360_F_173371622_02A2qGqjhsJ5SWVhUPu0t9O9ezlfvF8l.jpg"
+    },
+    {
+      "id": "6f2b",
+      "name": "",
+      "location": "",
+      "img_url": "https://t3.ftcdn.net/jpg/01/73/37/16/360_F_173371622_02A2qGqjhsJ5SWVhUPu0t9O9ezlfvF8l.jpg"
     }
   ]
 }
